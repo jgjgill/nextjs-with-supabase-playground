@@ -1,4 +1,4 @@
-import KakaoButton from "@/app/auth/callback/KakaoButton";
+import KakaoButton from "@/app/auth/callback/kakao-button";
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
 import Link from "next/link";

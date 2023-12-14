@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
-import KakaoButton from "./auth/callback/KakaoButton";
+import KakaoButton from "./auth/callback/kakao-button";
 
 export default async function page() {
   const cookieStore = cookies();
