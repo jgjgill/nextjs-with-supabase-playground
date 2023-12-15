@@ -1,5 +1,4 @@
 import KakaoButton from "@/app/auth/callback/kakao-button";
-import { Database } from "@/lib/database.types";
 import { createClient } from "@/utils/supabase/server";
 import { SupabaseClient } from "@supabase/supabase-js";
 import { cookies } from "next/headers";
