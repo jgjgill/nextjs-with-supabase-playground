@@ -1,6 +1,7 @@
 import { createClient } from "@/utils/supabase/server";
 import { cookies } from "next/headers";
 import AddNoteInput from "./add-note-input";
+import DeleteNoteButton from "./delete-note-button";
 
 export default async function page({ params }: { params: { id: string } }) {
   const { id: userId } = params;
@@ -28,11 +29,13 @@ export default async function page({ params }: { params: { id: string } }) {
       </h2>
 
       <AddNoteInput userId={userId} />
-
       <ul className="bg-slate-100 rounded-xl p-5 w-full flex flex-col gap-5 mt-10">
         {userNotes.map((userNote) => (
-          <li key={userNote.id} className="bg-white px-4 py-2 rounded-xl">
+          <li
+            key={userNote.id}
+            className="bg-white flex justify-between px-4 py-2 rounded-xl">
             {userNote.title}
+            <DeleteNoteButton noteId={userNote.id} />
           </li>
         ))}
       </ul>
