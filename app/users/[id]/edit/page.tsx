@@ -25,7 +25,7 @@ export default async function page({ params }: { params: { id: string } }) {
   return (
     <>
       <h2 className="w-full bg-slate-100 rounded-xl px-4 py-2 text-center mb-5">
-        {`${userNickname[0].nickname}의 노트(좋아요 개수 받기)`}
+        {`${userNickname[0].nickname}의 노트`}
       </h2>
 
       <AddNoteInput userId={userId} />

@@ -45,7 +45,11 @@ export default async function page({ params }: { params: { id: string } }) {
       </h2>
 
       {user && user.id === targetUserId && (
-        <Link href={`/users/${targetUserId}/edit`}>수정하기</Link>
+        <Link
+          href={`/users/${targetUserId}/edit`}
+          className="bg-slate-100 rounded-xl px-4 py-2 text-center mb-5 w-full">
+          수정하기
+        </Link>
       )}
 
       {user && user.id !== targetUserId && (
