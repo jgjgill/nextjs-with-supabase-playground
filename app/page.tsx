@@ -50,7 +50,7 @@ export default async function page() {
             key={allUsersNote.id}
             href={`/users/${allUsersNote.id}`}
             className="px-4 py-2 w-full bg-white rounded-xl">
-            {`${allUsersNote.nickname}의 노트 (${allUsersNote.notes[0].count})`}
+            {`${allUsersNote.nickname}의 노트 (노트 개수: ${allUsersNote.notes[0].count})`}
           </Link>
         ))}
       </div>
